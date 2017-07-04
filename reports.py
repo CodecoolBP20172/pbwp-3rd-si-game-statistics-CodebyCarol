@@ -21,6 +21,9 @@ def decide(file_name, year):
         #expected return: boolean value
 
 
+def game_tuple(title, release_year):
+    pass
+
 #Which was the latest game?
 def get_latest(file_name):
     pass
