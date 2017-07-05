@@ -20,18 +20,38 @@ def decide(file_name, year):
         #else has been added after test passed
         #expected return: boolean value
 
-
-def game_tuple(title, release_year):
-    pass
+#
+# def game_tuple(title, release_year):
+#     pass
 
 #Which was the latest game?
 def get_latest(file_name):
-    pass
+    with open ('game_stat.txt', 'r') as text:
+        all_game_list=[]
+        latest = "0"
+        for line in text:
+            game = line.split('\t')
+            all_game_list.append(game)
+            release_year=game[2]
+            if release_year > latest:
+                latest = release_year
+        return latest
 #expected return: title of the latest game, as string
 
 #How many games do we have by genre?
 def count_by_genre(file_name, genre):
     pass
+# import itertools
+# def make_drug_dictionary(data):
+#     drug_dictionary = {}
+#     for key, row in itertools.groupby(data, lambda x: x[11]):
+#         drug_dictionary.setdefault(key,[]).append(row[?])
+#     return drug_dictionary
+
+If you don't know how groupby works just check this example:
+
+>>> list(key for key, val in itertools.groupby('aaabbccddeefaa'))
+['a', 'b', 'c', 'd', 'e', 'f', 'a']
 #expected return: a number
 
 #What is the line number of the given game (by title)?
