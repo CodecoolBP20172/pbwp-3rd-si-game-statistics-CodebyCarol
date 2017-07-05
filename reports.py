@@ -54,18 +54,19 @@ def count_by_genre(file_name, genre):
         if genre_index == genre:
             count +=1
     return count
-# import itertools
-# def make_drug_dictionary(data):
-#     drug_dictionary = {}
-#     for key, row in itertools.groupby(data, lambda x: x[11]):
-#         drug_dictionary.setdefault(key,[]).append(row[?])
-#     return drug_dictionary
-
 #expected return: a number
+
 
 #What is the line number of the given game (by title)?
 def get_line_number_by_title(file_name, title):
-    pass
+    text = make_list_of_games(file_name)
+    line_number = 1
+    for line in text:
+        title_index = line[0]
+        if title_index == title:
+            return line_number
+        line_number += 1
+
     #expected return: a number
     #(if there is no game found, then raises ValueError exception)
 
