@@ -1,9 +1,9 @@
-
 # How many games are in the file?
 def count_games(file_name):
     with open ('game_stat.txt', 'r') as text:
         return len(text.readlines())
         #expected return: number
+
 
 #Is there a game from a given year?
 def decide(file_name, year):
@@ -17,12 +17,8 @@ def decide(file_name, year):
             if release_year == year:
                 return True
         return False
-        #else has been added after test passed
         #expected return: boolean value
 
-#
-# def game_tuple(title, release_year):
-#     pass
 
 #Making one big list, with list of games(lines)
 def make_list_of_games(file_name):
@@ -48,9 +44,16 @@ def get_latest(file_name):
     return latest_game
 #expected return: title of the latest game, as string
 
+
 #How many games do we have by genre?
 def count_by_genre(file_name, genre):
-    pass
+    text = make_list_of_games(file_name)
+    count = 0
+    for line in text:
+        genre_index = line[3]
+        if genre_index == genre:
+            count +=1
+    return count
 # import itertools
 # def make_drug_dictionary(data):
 #     drug_dictionary = {}
