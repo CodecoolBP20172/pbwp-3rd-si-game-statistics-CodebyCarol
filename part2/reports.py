@@ -75,7 +75,21 @@ def get_date_avg(file_name):
 
 #6: What properties has a game?
 def get_game(file_name, title):
-    pass
+    text = list_of_games(file_name)
+    list_of_properties = []
+    for line in text:
+        title_index = str(line [0])
+        total_sold_index = float(line [1])
+        release_date_index = int(line [2])
+        genre_index = str(line [3])
+        publisher_index = str(line [4])
+        if title == title_index:
+            list_of_properties.append(title_index)
+            list_of_properties.append(total_sold_index)
+            list_of_properties.append(release_date_index)
+            list_of_properties.append(genre_index)
+            list_of_properties.append((publisher_index).replace('\n', ''))
+    return list_of_properties
     #expected return: list of all properties of the game (list of various type)
     #The function get a parameter named game. This is the title of the game ('')
     #This is an existent game. The function returns a list of properties of
