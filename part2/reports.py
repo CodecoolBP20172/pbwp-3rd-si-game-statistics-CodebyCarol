@@ -9,11 +9,14 @@ def list_of_games(file_name):
             list_of_games.append(game)
     return list_of_games
 
+def count_games(file_name):
+    with open (file_name, 'r') as text:
+        return len(text.readlines())
 
 
 #1: What is the title of the most played game?(i.e. sold the most copies)
 def get_most_played(file_name):
-    text=list_of_games(file_name)
+    text = list_of_games(file_name)
     max_sold = 0.00
     for line in text:
         game_name = name_index = line[0]
@@ -23,13 +26,18 @@ def get_most_played(file_name):
         if float(max_sold) < float(total_sold_index):
             max_sold = total_sold_index
             game_name = name_index
-            return game_name
+            return game_name #check this with different order!! not sure..
     #expected return: string
     #if there is more than one, than returns the first from the file
 
 #2: How many copies have been sold total?
 def sum_sold(file_name):
-    pass
+    lines = count_games(file_name)
+    text = list_of_games(file_name)
+    sum_sold = 0.00
+    for line in text:
+        sum_sold += float(line[1])
+    return sum_sold
     #expected return: number
 
 #3: What is the overage selling?
