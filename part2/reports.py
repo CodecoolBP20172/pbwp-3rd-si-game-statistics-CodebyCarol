@@ -52,7 +52,13 @@ def get_selling_avg(file_name):
 
 #4: How many characters long is the longest title?
 def count_longest_title(file_name):
-    pass
+    title_lenght = 1
+    text = list_of_games(file_name)
+    for line in text:
+        title_index = line[0]
+        if title_lenght < len (title_index):
+            title_lenght = len(title_index)
+    return title_lenght        
     #expected return: number
 
 #5: What is the average of the release dates?
