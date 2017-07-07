@@ -11,6 +11,7 @@ reports.get_most_played('game_stat.txt') )
 pprint('The total number of sold copies: ' + \
     str(reports.sum_sold('game_stat.txt')) + ' million')
 
+
 #3: What is the overage selling?
 pprint('The overage saled copies is ' + \
     str('%.2f' % reports.get_selling_avg('game_stat.txt')) + ' million')
@@ -20,9 +21,11 @@ pprint('The overage saled copies is ' + \
 pprint('The longest title has: ' + \
     str(reports.count_longest_title('game_stat.txt')) + ' characters')
 
+
 #5: What is the average of the release dates?
 pprint(str(reports.get_date_avg('game_stat.txt')) + \
-    ' is the average release date of this games') 
+    ' is the average release date of this games')
+
 
 #6: What properties has a game?
 pprint('The Minecraft game has the following properties: ' + \
