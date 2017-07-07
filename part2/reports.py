@@ -58,12 +58,19 @@ def count_longest_title(file_name):
         title_index = line[0]
         if title_lenght < len (title_index):
             title_lenght = len(title_index)
-    return title_lenght        
+    return title_lenght
     #expected return: number
 
 #5: What is the average of the release dates?
 def get_date_avg(file_name):
-    pass
+    text = list_of_games(file_name)
+    lines = count_games(file_name)
+    sum_date = 0
+    for line in text:
+        date_index = line[2]
+        sum_date += int(date_index)
+    date_avg = round(sum_date/lines)
+    return date_avg
     #expected return: average year (number) rounded up
 
 #6: What properties has a game?
