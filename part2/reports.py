@@ -32,7 +32,6 @@ def get_most_played(file_name):
 
 #2: How many copies have been sold total?
 def sum_sold(file_name):
-    lines = count_games(file_name)
     text = list_of_games(file_name)
     sum_sold = 0.00
     for line in text:
@@ -42,7 +41,13 @@ def sum_sold(file_name):
 
 #3: What is the overage selling?
 def get_selling_avg(file_name):
-    pass
+    lines = count_games(file_name)
+    text = list_of_games(file_name)
+    sum_sold = 0.00
+    for line in text:
+        sum_sold += float(line[1])
+    average = sum_sold/lines
+    return average
     #expected return: number
 
 #4: How many characters long is the longest title?
