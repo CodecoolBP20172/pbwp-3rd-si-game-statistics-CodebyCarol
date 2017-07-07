@@ -1,9 +1,29 @@
 # Report functions
 # 2nd part
 
+def list_of_games(file_name):
+    with open (file_name, 'r') as text:
+        list_of_games=[]
+        for line in text:
+            game = line.split('\t')
+            list_of_games.append(game)
+    return list_of_games
+
+
+
 #1: What is the title of the most played game?(i.e. sold the most copies)
 def get_most_played(file_name):
-    pass
+    text=list_of_games(file_name)
+    max_sold = 0.00
+    for line in text:
+        game_name = name_index = line[0]
+        total_sold_index = line[1]
+        if float(max_sold) == float(total_sold_index):
+            return game_name
+        if float(max_sold) < float(total_sold_index):
+            max_sold = total_sold_index
+            game_name = name_index
+            return game_name
     #expected return: string
     #if there is more than one, than returns the first from the file
 
