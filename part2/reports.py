@@ -47,7 +47,7 @@ def get_selling_avg(file_name):
     for line in text:
         sum_sold += float(line[1])
     average = sum_sold/lines
-    return average
+    return (average)
     #expected return: number
 
 #4: How many characters long is the longest title?
@@ -78,11 +78,11 @@ def get_game(file_name, title):
     text = list_of_games(file_name)
     list_of_properties = []
     for line in text:
-        title_index = str(line [0])
+        title_index = line [0]
         total_sold_index = float(line [1])
         release_date_index = int(line [2])
-        genre_index = str(line [3])
-        publisher_index = str(line [4])
+        genre_index = line [3]
+        publisher_index = line [4]
         if title == title_index:
             list_of_properties.append(title_index)
             list_of_properties.append(total_sold_index)
