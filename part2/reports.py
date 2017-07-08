@@ -94,18 +94,3 @@ def get_game(file_name, title):
                                   publisher_index]
             return list_of_properties
             # list of all properties of the game (list of various type)
-
-# 
-# '''Nice to have '''
-# # 7: How many games are there grouped by genre?
-# def count_grouped_by_genre(file_name):
-#     text = list_of_games(file_name)
-#     pass
-#     # expected return: a dictionary with this structure: {[genre]:[count]}
-#
-#
-# # 8: What is the date ordered list of the games?
-# def get_date_ordered(file_name):
-#     pass
-#     # expected return:
-#     # date ordered list of the titles in desc order (list of string)
