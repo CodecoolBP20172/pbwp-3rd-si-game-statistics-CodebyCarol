@@ -1,6 +1,5 @@
 # Export functions
 import reports
-import printing
 reply1 = ('The most played game is: '+ reports.get_most_played('game_stat.txt'))
 reply2 = ('The total number of sold copies: ' + \
     str(reports.sum_sold('game_stat.txt')) + ' million')
