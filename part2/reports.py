@@ -94,3 +94,4 @@ def get_game(file_name, title):
                                   publisher_index]
             return list_of_properties
             # list of all properties of the game (list of various type)
+#the nice to have parts under developing    
